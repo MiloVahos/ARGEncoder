@@ -297,7 +297,10 @@ int main(int argc, char *argv[]) {
 	//IMPRIMIR EL HISTOGRAMA
 	fprintf(META,"MUTATIONS HISTOGRAM\n");
 	fprintf(META,"s: %"PRIu32" - d: %"PRIu32": i: %"PRIu32" - D: %"PRIu32" - I: %"PRIu32" - T: %"PRIu32" - S: %"PRIu32" - C: %"PRIu32" \n",Hist[0],Hist[1],Hist[2],Hist[3],Hist[4],Hist[5],Hist[6],Hist[7]);
-
+	// SUMAR TODOS LOS VALORES DEL HISTOGRAMA Y PONERLOS EN UNA VARIABLES
+	uint64_t AcumuladoHist = 0;
+	for ( int i = 0; i < MUTATION_TYPES; i++ )  AcumuladoHist = AcumuladoHist + Hist[i];
+	fprintf(ALIGN,"%"PRIu64"\n",AcumuladoHist);
 
 	fclose(META);
 	fclose(ALIGN);
