@@ -1,5 +1,5 @@
 #!/bin/bash
-
+:'
 mkdir "Prueba0"
 time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B 100 -C 1 -P0 0.3625
 echo "Completado la prueba 0"
@@ -55,9 +55,9 @@ rm "GRCh38.meta"
 rm "GRCh38.fastq"
 rm "GRCh38.fastqseq"
 mv "GRCh38.align" "PruebaC2"
-
+'
 mkdir "PruebaD1"
-time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B 200000 -C 500 -P0 0.02
+time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B 100000000 -C 1 -P0 0.02
 echo "Completado la prueba D1"
 rm "GRCh38.meta"
 rm "GRCh38.fastq"
@@ -65,7 +65,7 @@ rm "GRCh38.fastqseq"
 mv "GRCh38.align" "PruebaD1"
 
 mkdir "PruebaD2"
-time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B 200000 -C 500 -P0 0.3625
+time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B 100000000 -C 1 -P0 0.3625
 echo "Completado la prueba D2"
 rm "GRCh38.meta"
 rm "GRCh38.fastq"
@@ -73,7 +73,7 @@ rm "GRCh38.fastqseq"
 mv "GRCh38.align" "PruebaD2" 
 
 mkdir "PruebaE1"
-time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B 200000 -C 1000 -P0 0.02
+time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B 200000000 -C 1 -P0 0.02
 echo "Completado la prueba E1"
 rm "GRCh38.meta"
 rm "GRCh38.fastq"
@@ -81,7 +81,7 @@ rm "GRCh38.fastqseq"
 mv "GRCh38.align" "PruebaE1"
 
 mkdir "PruebaE2"
-time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B 200000 -C 1000 -P0 0.3625
+time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B 200000000 -C 1 -P0 0.3625
 echo "Completado la prueba E2"
 rm "GRCh38.meta"
 rm "GRCh38.fastq"
