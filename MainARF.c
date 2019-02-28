@@ -274,7 +274,7 @@ int main(int argc, char *argv[]) {
 			//IMPRIMIR LOS CONTADORES
 			//printCounters(ALIGN,Cnt);
 			//GENERAR EL READ
-			generateRead(Read,id,L,Q,I,FASTQ,FASTQSEQ);
+			// generateRead(Read,id,L,Q,I,FASTQ,FASTQSEQ);
 			if(Oper)	free(Oper);
 			if(Cnt)		free(Cnt);
 			if(Offsets)	free(Offsets);
@@ -286,7 +286,7 @@ int main(int argc, char *argv[]) {
 			//EN EL ARCHIVO DE ALINEACIÓN SE MUESTRA EL TIPO DE MATCH NADA MÁS
 			fprintf(ALIGN,"%c\n",strand);
 			//SE IMPRE EL READ Y LA SECUENCIA
-			generateRead(Read,id,L,Q,I,FASTQ,FASTQSEQ);
+			// generateRead(Read,id,L,Q,I,FASTQ,FASTQSEQ);
 		}
 		//fprintf(FASTQ,"\n\n");
 
