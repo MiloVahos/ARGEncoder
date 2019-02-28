@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for B in 100 20000000 100000000 200000000; do
+for B in 200000000; do
     
     mkdir "Prueba con $B y 002"
     time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B $B -C 1 -P0 0.02
