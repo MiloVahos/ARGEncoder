@@ -1,15 +1,32 @@
 #!/bin/bash
 
-for B in 200000000; do
-    
-    mkdir "Prueba con $B y 002"
-    time ./ARF -DATA GRCh38.fa -I -Q -L 1024 -B $B -C 1 -P0 0.02
-    echo "Completada prueba con $B"
-    mv "GRCh38.meta" "Prueba con $B y 002"
-    mv "GRCh38.align" "Prueba con $B y 002"
-    cp "Encoder" "Prueba con $B y 002"
-    cd "Prueba con $B y 002"
-    ./Encoder
-    cd ..
-
+# L = 256
+# K = 26 => P0 = 0.1075
+for B in 1000000 10000000 50000000 100000000; do
+    mkdir "L256_K26_B$B"
+    time ./ARF -DATA GRCh38.fa -I -Q -L 256 -B $B -C 1 -P0 0.1075
+    echo "Completada L256_K26_B$B"
+    mv "GRCh38.meta" "L256_K26_B$B"
+    mv "GRCh38.align" "L256_K26_B$B"
 done
+
+# K = 64 => P0 = 0.0575
+for B in 1000000 10000000 50000000 100000000; do
+    mkdir "L256_K64_B$B"
+    time ./ARF -DATA GRCh38.fa -I -Q -L 256 -B $B -C 1 -P0 0.0575
+    echo "Completada L256_K64_B$B"
+    mv "GRCh38.meta" "L256_K64_B$B"
+    mv "GRCh38.align" "L256_K64_B$B"
+done
+
+# K = 128 => P0 = 0.0325
+for B in 1000000 10000000 50000000 100000000; do
+    mkdir "L256_K128_B$B"
+    time ./ARF -DATA GRCh38.fa -I -Q -L 256 -B $B -C 1 -P0 0.0325
+    echo "Completada L256_K128_B$B"
+    mv "GRCh38.meta" "L256_K128_B$B"
+    mv "GRCh38.align" "L256_K128_B$B"
+done
+
+
+
