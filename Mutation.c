@@ -110,7 +110,7 @@ void offsetsGen	(uint16_t lendesc,uint16_t *Offsets, uint16_t L){
 		int OffsetAux = 0;
 		do {
 			//OffsetAux	=	rand() %(((L-1)-(lendesc - i)) + 1 - 0) + 0;
-			OffsetAux	=	rand() %(L-100) + 0;
+			OffsetAux	=	rand() %(L-256) + 0;
 			if ( i != 0 ) {
 				int contador = 0;
 				for (int j = 0; j < i; j++ ) {
